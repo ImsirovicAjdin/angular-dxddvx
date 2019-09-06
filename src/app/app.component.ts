@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  frontends = [
+    {
+      name: 'Angular',
+      details: [
+        { type: 'framework' },
+        { currentVersion: 8 }
+      ]
+    },
+    {
+      name: 'React',
+      details: [
+        { type: 'library' },
+        { currentVersion: 16.9 }
+      ]
+    }
+  ]
 }
