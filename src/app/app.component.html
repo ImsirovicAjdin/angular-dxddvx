@@ -1,3 +1,17 @@
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>Frontends:</h1>
+<table>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Current Version</th>
+  </tr>
+  <tr *ngFor="let f of frontends; let i = index ">
+    <td>{{ i + 1 }}</td>
+    <td>{{ f.name }}</td>
+    <ng-container *ngFor="let d of f.details;">
+      <td *ngIf="d.type">{{ d.type }}</td>
+      <td *ngIf="d.currentVersion">{{ d.currentVersion }}</td>
+    </ng-container>
+  </tr>
+</table>
